@@ -197,7 +197,7 @@ This ensures:
 次のドキュメントでは、
 **具体的にどのイベントが存在するのか**を定義します。
 
-> [Audit Events Definition](docs/audit-events.md)
+> [Audit Events Definition](audit-events.md)
 
 
 ### English
@@ -205,5 +205,5 @@ This ensures:
 The next document defines **which audit events exist**
 and what each one means.
 
-> [Audit Events Definition](docs/audit-events.md)
+> [Audit Events Definition](audit-events.md)
 

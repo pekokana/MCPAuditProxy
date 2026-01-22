@@ -1,0 +1,42 @@
+[
+  {
+    "trace_id": "trace-1",
+    "event_seq": 1,
+    "event_type": "request_received",
+    "event_time": "2026-01-22T10:00:01Z",
+    "prev_hash": "GENESIS",
+    "this_hash": "hash_001"
+  },
+  {
+    "trace_id": "trace-1",
+    "event_seq": 2,
+    "event_type": "server_forwarded",
+    "event_time": "2026-01-22T10:00:02Z",
+    "prev_hash": "hash_001",
+    "this_hash": "hash_002"
+  },
+  {
+    "trace_id": "_system",
+    "event_seq": 1,
+    "event_type": "chain_start",
+    "event_time": "2026-01-22T11:00:00Z",
+    "prev_hash": "hash_002",
+    "this_hash": "hash_003"
+  },
+  {
+    "trace_id": "trace-2",
+    "event_seq": 2,
+    "event_type": "request_received",
+    "event_time": "2026-01-22T11:00:01Z",
+    "prev_hash": "hash_003",
+    "this_hash": "hash_004"
+  },
+  {
+    "trace_id": "trace-2",
+    "event_seq": 3,
+    "event_type": "response_sent",
+    "event_time": "2026-01-22T11:00:02Z",
+    "prev_hash": "hash_004",
+    "this_hash": "hash_005"
+  }
+]

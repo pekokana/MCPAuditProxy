@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/mcp-audit-proxy/schemas/audit-event.schema.json",
+  "title": "MCP Audit Event",
+  "description": "Minimal audit event schema for MCP Audit Proxy with hash-chain support",
+  "type": "object",
+  "required": [
+    "trace_id",
+    "event_seq",
+    "event_type",
+    "event_time",
+    "prev_hash",
+    "this_hash"
+  ],
+  "properties": {
+    "trace_id": {
+      "type": "string",
+      "description": "Unique identifier for a single MCP request / decision"
+    },
+    "event_seq": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Strict sequence number within a trace_id"
+    },
+    "event_type": {
+      "type": "string",
+      "enum": [
+        "chain_start",
+        "request_received",
+        "server_forwarded",
+        "server_response_received",
+        "response_sent",
+        "error"
+      ],
+      "description": "Type of audit event"
+    },
+    "event_time": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp when the event occurred (UTC, ISO-8601)"
+    },
+    "prev_hash": {
+      "type": "string",
+      "description": "Hash of the previous audit event in the chain"
+    },
+    "this_hash": {
+      "type": "string",
+      "description": "Hash of this event, computed over canonicalized event content"
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Optional non-hashed metadata for operational use",
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}
